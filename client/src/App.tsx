@@ -15,8 +15,26 @@ function App() {
         <div>もっと見る</div>
         <div>ツイートする</div>
       </section>
-      <main>main</main>
-      <section>right pane</section>
+      <main>
+        <div>
+          <div>top rect</div>
+          <div>ヒーロー画像</div>
+          <div>プロフィール</div>
+        </div>
+        <div>
+          <div>ツイート</div>
+          <div>ツイート</div>
+          <div>ツイート</div>
+          <div>ツイート</div>
+          <div>ツイート</div>
+        </div>
+      </main>
+      <section>
+        <div>キーワードを検索</div>
+        <div>画像一覧</div>
+        <div>おすすめツイート</div>
+        <div>利用規約など</div>
+      </section>
     </div>
   );
 }
