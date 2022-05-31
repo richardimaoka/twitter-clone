@@ -48,7 +48,15 @@ function App() {
           <div>ツイート</div>
         </div>
       </main>
-      <section>
+
+      <section
+        css={css`
+          display: none;
+          @media (min-width: 1021px) {
+            display: block;
+          }
+        `}
+      >
         <div>キーワードを検索</div>
         <div>画像一覧</div>
         <div>おすすめツイート</div>
