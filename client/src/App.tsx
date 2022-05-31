@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
 import { css } from "@emotion/react";
+import { Main } from "./Main";
 
 const flex = css`
   display: flex;
@@ -27,28 +28,7 @@ function App() {
         <div>もっと見る</div>
         <div>ツイートする</div>
       </section>
-
-      <main
-        css={css`
-          @media (min-width: 720px) {
-            width: 600px;
-          }
-        `}
-      >
-        <div>
-          <div>top rect</div>
-          <div>ヒーロー画像</div>
-          <div>プロフィール</div>
-        </div>
-        <div>
-          <div>ツイート</div>
-          <div>ツイート</div>
-          <div>ツイート</div>
-          <div>ツイート</div>
-          <div>ツイート</div>
-        </div>
-      </main>
-
+      <Main />
       <section
         css={css`
           display: none;
