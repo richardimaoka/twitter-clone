@@ -9,7 +9,13 @@ const flex = css`
 function App() {
   return (
     <div css={flex}>
-      <section>
+      <section
+        css={css`
+          @media (min-width: 1280px) {
+            width: 270px;
+          }
+        `}
+      >
         <div>logo</div>
         <div>home</div>
         <div>話題を検索</div>
