@@ -5,20 +5,22 @@ import { Profile } from "./Profile";
 
 export const Main = (): JSX.Element => {
   return (
-    <main
-      css={css`
-        @media (min-width: 720px) {
-          width: 600px;
-        }
-      `}
-    >
-      <Profile />
-      <div>
-        <div>ツイート</div>
-        <div>ツイート</div>
-        <div>ツイート</div>
-        <div>ツイート</div>
-        <div>ツイート</div>
+    <main>
+      <div
+        css={css`
+          @media (min-width: 720px) {
+            width: 600px;
+          }
+        `}
+      >
+        <Profile />
+        <div>
+          <div>ツイート</div>
+          <div>ツイート</div>
+          <div>ツイート</div>
+          <div>ツイート</div>
+          <div>ツイート</div>
+        </div>
       </div>
     </main>
   );
