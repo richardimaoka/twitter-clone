@@ -1,8 +1,13 @@
 import React from "react";
+import { css } from "@emotion/react";
+
+const flex = css`
+  display: flex;
+`;
 
 function App() {
   return (
-    <div style={{ display: "flex" }}>
+    <div css={flex}>
       <section>
         <div>logo</div>
         <div>home</div>
