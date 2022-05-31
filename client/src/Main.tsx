@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
 import { css } from "@emotion/react";
+import { Profile } from "./Profile";
 
 export const Main = (): JSX.Element => {
   return (
@@ -11,11 +12,7 @@ export const Main = (): JSX.Element => {
         }
       `}
     >
-      <div>
-        <div>top rect</div>
-        <div>ヒーロー画像</div>
-        <div>プロフィール</div>
-      </div>
+      <Profile />
       <div>
         <div>ツイート</div>
         <div>ツイート</div>
