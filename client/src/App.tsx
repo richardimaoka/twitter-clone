@@ -1,7 +1,13 @@
 import React from "react";
 
 function App() {
-  return <div></div>;
+  return (
+    <>
+      <section>left pane</section>
+      <main>main</main>
+      <section>right pane</section>
+    </>
+  );
 }
 
 export default App;
