@@ -27,7 +27,14 @@ function App() {
         <div>もっと見る</div>
         <div>ツイートする</div>
       </section>
-      <main>
+
+      <main
+        css={css`
+          @media (min-width: 720px) {
+            width: 600px;
+          }
+        `}
+      >
         <div>
           <div>top rect</div>
           <div>ヒーロー画像</div>
