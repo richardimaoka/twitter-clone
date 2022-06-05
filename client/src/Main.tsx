@@ -11,6 +11,8 @@ export const Main = (): JSX.Element => {
           @media (min-width: 720px) {
             width: 600px;
           }
+          border-left: 1px solid #ececec;
+          border-right: 1px solid #ececec;
         `}
       >
         <Profile />
