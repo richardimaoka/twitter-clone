@@ -74,66 +74,14 @@ export const Leftbar = (): JSX.Element => {
       </div>
 
       <LeftbarItem icon={faHouse} name={"home"} />
+      <LeftbarItem icon={faHashtag} name={"話題を検索"} />
+      <LeftbarItem icon={faBell} name={"通知"} />
+      <LeftbarItem icon={faMessage} name={"メッセージ"} />
+      <LeftbarItem icon={faBookmark} name={"ブックマーク"} />
+      <LeftbarItem icon={faClipboardList} name={"リスト"} />
+      <LeftbarItem icon={faUser} name={"プロフィール"} />
+      <LeftbarItem icon={faEllipsis} name={"もっと見る"} />
 
-      <div
-        css={css`
-          display: flex;
-        `}
-      >
-        <div
-          css={css`
-            width: 50px;
-            height: 50px;
-          `}
-        >
-          <FontAwesomeIcon
-            icon={faHashtag}
-            size="2x"
-            style={{ color: "#252525" }}
-          />
-        </div>
-        <div>話題を検索</div>
-      </div>
-      <div>
-        <FontAwesomeIcon icon={faBell} size="2x" style={{ color: "#252525" }} />
-        通知
-      </div>
-      <div>
-        <FontAwesomeIcon
-          icon={faMessage}
-          size="2x"
-          style={{ color: "#252525" }}
-        />
-        メッセージ
-      </div>
-      <div>
-        <FontAwesomeIcon
-          icon={faBookmark}
-          size="2x"
-          style={{ color: "#252525" }}
-        />
-        ブックマーク
-      </div>
-      <div>
-        <FontAwesomeIcon
-          icon={faClipboardList}
-          size="2x"
-          style={{ color: "#252525" }}
-        />
-        リスト
-      </div>
-      <div>
-        <FontAwesomeIcon icon={faUser} size="2x" style={{ color: "#252525" }} />
-        プロフィール
-      </div>
-      <div>
-        <FontAwesomeIcon
-          icon={faEllipsis}
-          size="2x"
-          style={{ color: "#252525" }}
-        />
-        もっと見る
-      </div>
       <button>ツイートする</button>
     </section>
   );
