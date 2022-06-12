@@ -6,6 +6,7 @@ import { faDove } from "@fortawesome/free-solid-svg-icons";
 
 const flex = css`
   display: flex;
+  min-height: 100vh;
 `;
 
 function App() {

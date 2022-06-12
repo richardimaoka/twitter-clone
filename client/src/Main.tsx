@@ -8,21 +8,25 @@ export const Main = (): JSX.Element => {
     <main
       css={css`
         background-color: #ab9deb;
+        margin-right: auto;
+        @media (min-width: 1021px) {
+          margin-right: 0px;
+        }
       `}
     >
       <div
         css={css`
           @media (min-width: 720px) {
             width: 600px;
+            height: 100%;
           }
+
           border-left: 1px solid #ececec;
           border-right: 1px solid #ececec;
         `}
       >
         <Profile />
         <div>
-          <div>ツイート</div>
-          <div>ツイート</div>
           <div>ツイート</div>
           <div>ツイート</div>
           <div>ツイート</div>
