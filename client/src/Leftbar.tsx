@@ -11,7 +11,52 @@ import {
   faClipboardList,
   faUser,
   faEllipsis,
+  IconDefinition,
 } from "@fortawesome/free-solid-svg-icons";
+
+const LeftbarItemIcon = ({ icon }: { icon: IconDefinition }): JSX.Element => (
+  <div
+    css={css`
+      width: 24px;
+      height: 24px;
+      display: flex;
+      justify-items: center;
+      align-items: center;
+    `}
+  >
+    <FontAwesomeIcon icon={icon} size="lg" style={{ color: "#252525" }} />
+  </div>
+);
+
+const LeftbarItemName = ({ name }: { name: string }): JSX.Element => (
+  <div>
+    <span
+      css={css`
+        font-size: 18px;
+      `}
+    >
+      {name}
+    </span>
+  </div>
+);
+
+const LeftbarItem = ({
+  icon,
+  name,
+}: {
+  icon: IconDefinition;
+  name: string;
+}): JSX.Element => (
+  <div
+    css={css`
+      display: flex;
+      align-items: center;
+    `}
+  >
+    <LeftbarItemIcon icon={icon} />
+    <LeftbarItemName name={name} />
+  </div>
+);
 
 export const Leftbar = (): JSX.Element => {
   return (
@@ -28,37 +73,7 @@ export const Leftbar = (): JSX.Element => {
         <FontAwesomeIcon icon={faDove} size="2x" style={{ color: "#6163d4" }} />
       </div>
 
-      <div
-        css={css`
-          display: flex;
-          align-items: center;
-        `}
-      >
-        <div
-          css={css`
-            width: 24px;
-            height: 24px;
-            display: flex;
-            justify-items: center;
-            align-items: center;
-          `}
-        >
-          <FontAwesomeIcon
-            icon={faHouse}
-            size="lg"
-            style={{ color: "#252525" }}
-          />
-        </div>
-        <div>
-          <span
-            css={css`
-              font-size: 18px;
-            `}
-          >
-            home
-          </span>
-        </div>
-      </div>
+      <LeftbarItem icon={faHouse} name={"home"} />
 
       <div
         css={css`
