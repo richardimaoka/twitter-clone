@@ -2,33 +2,19 @@
 import { css } from "@emotion/react";
 import { Main } from "./Main";
 import { Leftbar } from "./Leftbar";
-
-const flex = css`
-  display: flex;
-  min-height: 100vh;
-`;
+import { Rightbar } from "./Rightbar";
 
 function App() {
   return (
-    <div css={flex}>
+    <div
+      css={css`
+        display: flex;
+        min-height: 100vh;
+      `}
+    >
       <Leftbar />
       <Main />
-      <section
-        css={css`
-          display: none;
-          @media (min-width: 1021px) {
-            display: block;
-            width: 350px;
-            margin-right: auto;
-            background-color: #c0c0c0;
-          }
-        `}
-      >
-        <div>キーワードを検索</div>
-        <div>画像一覧</div>
-        <div>おすすめツイート</div>
-        <div>利用規約など</div>
-      </section>
+      <Rightbar />
     </div>
   );
 }
