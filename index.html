@@ -8,24 +8,25 @@
       src="https://kit.fontawesome.com/57bd120ab3.js"
       crossorigin="anonymous"
     ></script>
+    <style>
+      .icon::before {
+        display: inline-block;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .login::before {
+        font: var(--fa-font-solid);
+        content: "\f007";
+      }
+    </style>
     <title>Document</title>
   </head>
   <body>
-    <h2>some h2 text</h2>
-    <body>
-      <!-- solid style -->
-      <i class="fa-solid fa-user fa-5x"></i>
-
-      <!-- regular style -->
-      <i class="fa-regular fa-user fa-5x"></i>
-
-      <!-- all new thin style -->
-      <i class="fa-thin fa-user fa-5x"></i>
-
-      <!--brand icon-->
-      <i class="fa-brands fa-github-square fa-5x"></i>
-
-      <i class="fa-solid fa-thumbs-up fa-5x"></i>
-    </body>
+    <div style="display: flex; background-color: #a8a8a8">
+      <div style="background-color: red; flex-basis: auto">a</div>
+      <div style="background-color: blue; flex-basis: 800px">b</div>
+      <div style="background-color: rgb(171, 238, 63); flex-basis: auto">c</div>
+    </div>
   </body>
 </html>

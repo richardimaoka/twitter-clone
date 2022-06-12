@@ -5,7 +5,11 @@ import { Profile } from "./Profile";
 
 export const Main = (): JSX.Element => {
   return (
-    <main>
+    <main
+      css={css`
+        background-color: #ab9deb;
+      `}
+    >
       <div
         css={css`
           @media (min-width: 720px) {

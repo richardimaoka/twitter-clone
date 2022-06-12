@@ -1,7 +1,8 @@
 /** @jsxImportSource @emotion/react */
-import React from "react";
 import { css } from "@emotion/react";
 import { Main } from "./Main";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDove } from "@fortawesome/free-solid-svg-icons";
 
 const flex = css`
   display: flex;
@@ -12,12 +13,16 @@ function App() {
     <div css={flex}>
       <section
         css={css`
+          background-color: #c0c0c0;
+          margin-left: auto;
           @media (min-width: 1280px) {
             width: 270px;
           }
         `}
       >
-        <div>logo</div>
+        <div>
+          <FontAwesomeIcon icon={faDove} />
+        </div>
         <div>home</div>
         <div>話題を検索</div>
         <div>通知</div>
@@ -34,6 +39,9 @@ function App() {
           display: none;
           @media (min-width: 1021px) {
             display: block;
+            width: 350px;
+            margin-right: auto;
+            background-color: #c0c0c0;
           }
         `}
       >
