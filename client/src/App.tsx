@@ -10,6 +10,7 @@ function App() {
       css={css`
         display: flex;
         min-height: 100vh;
+        justify-content: center;
       `}
     >
       <Leftbar />

@@ -9,7 +9,6 @@ export const Rightbar = (): JSX.Element => {
         @media (min-width: 1021px) {
           display: block;
           width: 350px;
-          margin-right: auto;
           background-color: #c0c0c0;
         }
       `}

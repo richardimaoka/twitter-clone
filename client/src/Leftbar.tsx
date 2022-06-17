@@ -63,7 +63,6 @@ export const Leftbar = (): JSX.Element => {
     <section
       css={css`
         background-color: #f3f3f3;
-        margin-left: auto;
         @media (min-width: 1280px) {
           width: 270px;
         }
