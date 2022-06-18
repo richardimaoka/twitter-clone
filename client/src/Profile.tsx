@@ -23,7 +23,16 @@ export const Profile = (): JSX.Element => {
         </div>
       </div>
       <div>
-        <div>picture</div>
+        <div>
+          <img
+            width="600px"
+            height="200px"
+            css={css`
+              vertical-align: bottom;
+            `}
+            src="http://localhost:8080/images/hero.jpg"
+          />
+        </div>
         <div>リチャード 伊真岡</div>
         <div>@RichardImaokaJP</div>
         <div>エンジニアリング・マネージャー</div>
