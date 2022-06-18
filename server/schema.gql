@@ -8,4 +8,5 @@ type Division {
   divisionDisplayNameEn: String
   numDepartments: Int
   numMembers: Int
+  newfield: String
 }

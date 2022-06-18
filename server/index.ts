@@ -14,7 +14,6 @@ const resolvers: { Query: QueryResolvers<ServerContext> } = {
   Query: {
     divisions: async (parent, args, context, info) => {
       console.log(`divisions`);
-
       return context.divisions;
     },
   },
