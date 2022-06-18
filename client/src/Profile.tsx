@@ -53,6 +53,25 @@ export const Profile = (): JSX.Element => {
             src="http://localhost:8080/images/hero.jpg"
           />
         </div>
+        <div
+          css={css`
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          `}
+        >
+          <img
+            width="120px"
+            height="120px"
+            css={css`
+              display: block;
+              border-radius: 120px;
+              margin-top: -50px;
+            `}
+            src="http://localhost:8080/images/profile.jpg"
+          />
+          <button>プロフィールを編集</button>
+        </div>
         <div>リチャード 伊真岡</div>
         <div>@RichardImaokaJP</div>
         <div>エンジニアリング・マネージャー</div>
