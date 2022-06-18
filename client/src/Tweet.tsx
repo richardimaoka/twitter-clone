@@ -12,6 +12,8 @@ export const Tweet = (): JSX.Element => {
         display: grid;
         grid-template-columns: 50px auto;
         grid-template-rows: 26px auto 20px;
+        border-top: solid 1px #ffffff;
+        border-bottom: solid 1px #ffffff;
       `}
     >
       <div
@@ -19,7 +21,15 @@ export const Tweet = (): JSX.Element => {
           grid-row: 1/4;
         `}
       >
-        profile pic
+        <img
+          width="40px"
+          height="40px"
+          css={css`
+            display: block;
+            border-radius: 20px;
+          `}
+          src="http://localhost:8080/images/profile.jpg"
+        />
       </div>
       <div
         css={css`
