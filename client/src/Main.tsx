@@ -2,6 +2,7 @@
 import React from "react";
 import { css } from "@emotion/react";
 import { Profile } from "./Profile";
+import { Tweet } from "./Tweet";
 
 export const Main = (): JSX.Element => {
   return (
@@ -21,11 +22,7 @@ export const Main = (): JSX.Element => {
         `}
       >
         <Profile />
-        <div>
-          <div>ツイート</div>
-          <div>ツイート</div>
-          <div>ツイート</div>
-        </div>
+        <Tweet />
       </div>
     </main>
   );
