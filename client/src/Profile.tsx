@@ -16,10 +16,30 @@ export const Profile = (): JSX.Element => {
             width: 56px;
             height: 32px;
           `}
-        ></div>
+        >
+          &larr;
+        </div>
         <div>
-          <div>リチャード 伊真岡</div>
-          <div>3000 件のツイート</div>
+          <div>
+            <span
+              css={css`
+                font-size: 20px;
+                font-weight: 700;
+              `}
+            >
+              リチャード 伊真岡
+            </span>
+          </div>
+          <div>
+            <span
+              css={css`
+                font-size: 13px;
+                font-weight: 400;
+              `}
+            >
+              3000 件のツイート
+            </span>
+          </div>
         </div>
       </div>
       <div>
