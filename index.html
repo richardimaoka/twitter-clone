@@ -16,29 +16,34 @@
     <title>Document</title>
   </head>
   <body>
-    <div>
-      <div>profile pic</div>
-      <div>
-        <div>richard imaoka</div>
-        <div>@RichardImaokaJP</div>
-        <div>3月1日</div>
+    <section style="width: 800px; margin: 0px auto">
+      <div
+        style="
+          display: grid;
+          grid-template-columns: 50px auto;
+          grid-template-rows: 26px auto 20px;
+        "
+      >
+        <div style="grid-row: 1/4">profile pic</div>
+        <div
+          style="
+            grid-row: 1/2;
+            display: grid;
+            grid-template-columns: fr fr fr;
+            grid-template-rows: auto;
+            font-size: 14px;
+          "
+        >
+          <div style="grid-column: 1/2">richard imaoka</div>
+          <div style="grid-column: 2/3">@RichardImaokaJP</div>
+          <div style="grid-column: 3/4">3月1日</div>
+        </div>
+        <div style="grid-row: 2/3">
+          AWSのソリューション・アーキテクト・アソシエイトに続いて、SysOps
+          アソシエイトも取得しました。
+        </div>
+        <div style="grid-row: 3/4"></div>
       </div>
-      <div>
-        AWSのソリューション・アーキテクト・アソシエイトに続いて、SysOps
-        アソシエイトも取得しました。
-      </div>
-      <div>
-        <div>reply</div>
-        <div>0</div>
-        <div>retweet</div>
-        <div>0</div>
-        <div>like</div>
-        <div>4</div>
-        <div>share</div>
-        <div>0</div>
-        <div>analytics</div>
-        <div>0</div>
-      </div>
-    </div>
+    </section>
   </body>
 </html>
