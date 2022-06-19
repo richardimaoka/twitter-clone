@@ -1,12 +1,7 @@
 type Query {
-  divisions: [Division]
+  profile: Profile
 }
 
-type Division {
-  divisionName: String
-  divisionDisplayName: String
-  divisionDisplayNameEn: String
-  numDepartments: Int
-  numMembers: Int
-  newfield: String
+type Profile {
+  name: String
 }

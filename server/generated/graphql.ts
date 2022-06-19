@@ -19,19 +19,14 @@ export type Scalars = {
   Float: number;
 };
 
-export type Division = {
-  __typename?: "Division";
-  divisionDisplayName: Maybe<Scalars["String"]>;
-  divisionDisplayNameEn: Maybe<Scalars["String"]>;
-  divisionName: Maybe<Scalars["String"]>;
-  newfield: Maybe<Scalars["String"]>;
-  numDepartments: Maybe<Scalars["Int"]>;
-  numMembers: Maybe<Scalars["Int"]>;
+export type Profile = {
+  __typename?: "Profile";
+  name: Maybe<Scalars["String"]>;
 };
 
 export type Query = {
   __typename?: "Query";
-  divisions: Maybe<Array<Maybe<Division>>>;
+  profile: Maybe<Profile>;
 };
 
 export type ResolverTypeWrapper<T> = Promise<T> | T;
@@ -142,8 +137,7 @@ export type DirectiveResolverFn<
 /** Mapping between all available schema types and the resolvers types */
 export type ResolversTypes = {
   Boolean: ResolverTypeWrapper<Scalars["Boolean"]>;
-  Division: ResolverTypeWrapper<Division>;
-  Int: ResolverTypeWrapper<Scalars["Int"]>;
+  Profile: ResolverTypeWrapper<Profile>;
   Query: ResolverTypeWrapper<{}>;
   String: ResolverTypeWrapper<Scalars["String"]>;
 };
@@ -151,38 +145,16 @@ export type ResolversTypes = {
 /** Mapping between all available schema types and the resolvers parents */
 export type ResolversParentTypes = {
   Boolean: Scalars["Boolean"];
-  Division: Division;
-  Int: Scalars["Int"];
+  Profile: Profile;
   Query: {};
   String: Scalars["String"];
 };
 
-export type DivisionResolvers<
+export type ProfileResolvers<
   ContextType = any,
-  ParentType extends ResolversParentTypes["Division"] = ResolversParentTypes["Division"]
+  ParentType extends ResolversParentTypes["Profile"] = ResolversParentTypes["Profile"]
 > = {
-  divisionDisplayName: Resolver<
-    Maybe<ResolversTypes["String"]>,
-    ParentType,
-    ContextType
-  >;
-  divisionDisplayNameEn: Resolver<
-    Maybe<ResolversTypes["String"]>,
-    ParentType,
-    ContextType
-  >;
-  divisionName: Resolver<
-    Maybe<ResolversTypes["String"]>,
-    ParentType,
-    ContextType
-  >;
-  newfield: Resolver<Maybe<ResolversTypes["String"]>, ParentType, ContextType>;
-  numDepartments: Resolver<
-    Maybe<ResolversTypes["Int"]>,
-    ParentType,
-    ContextType
-  >;
-  numMembers: Resolver<Maybe<ResolversTypes["Int"]>, ParentType, ContextType>;
+  name: Resolver<Maybe<ResolversTypes["String"]>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
@@ -190,14 +162,10 @@ export type QueryResolvers<
   ContextType = any,
   ParentType extends ResolversParentTypes["Query"] = ResolversParentTypes["Query"]
 > = {
-  divisions: Resolver<
-    Maybe<Array<Maybe<ResolversTypes["Division"]>>>,
-    ParentType,
-    ContextType
-  >;
+  profile: Resolver<Maybe<ResolversTypes["Profile"]>, ParentType, ContextType>;
 };
 
 export type Resolvers<ContextType = any> = {
-  Division: DivisionResolvers<ContextType>;
+  Profile: ProfileResolvers<ContextType>;
   Query: QueryResolvers<ContextType>;
 };
