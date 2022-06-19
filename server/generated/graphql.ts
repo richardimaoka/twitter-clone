@@ -27,6 +27,21 @@ export type Profile = {
 export type Query = {
   __typename?: "Query";
   profile: Maybe<Profile>;
+  tweets: Maybe<Array<Maybe<Tweet>>>;
+};
+
+export type Tweet = {
+  __typename?: "Tweet";
+  createdAt: Maybe<Scalars["String"]>;
+  imageHeight: Maybe<Scalars["Int"]>;
+  imageUrl: Maybe<Scalars["String"]>;
+  imageWidth: Maybe<Scalars["Int"]>;
+  likeCount: Maybe<Scalars["Int"]>;
+  name: Maybe<Scalars["String"]>;
+  replyCount: Maybe<Scalars["Int"]>;
+  retweetCount: Maybe<Scalars["Int"]>;
+  screenName: Maybe<Scalars["String"]>;
+  text: Maybe<Scalars["String"]>;
 };
 
 export type ResolverTypeWrapper<T> = Promise<T> | T;
@@ -137,17 +152,21 @@ export type DirectiveResolverFn<
 /** Mapping between all available schema types and the resolvers types */
 export type ResolversTypes = {
   Boolean: ResolverTypeWrapper<Scalars["Boolean"]>;
+  Int: ResolverTypeWrapper<Scalars["Int"]>;
   Profile: ResolverTypeWrapper<Profile>;
   Query: ResolverTypeWrapper<{}>;
   String: ResolverTypeWrapper<Scalars["String"]>;
+  Tweet: ResolverTypeWrapper<Tweet>;
 };
 
 /** Mapping between all available schema types and the resolvers parents */
 export type ResolversParentTypes = {
   Boolean: Scalars["Boolean"];
+  Int: Scalars["Int"];
   Profile: Profile;
   Query: {};
   String: Scalars["String"];
+  Tweet: Tweet;
 };
 
 export type ProfileResolvers<
@@ -163,9 +182,36 @@ export type QueryResolvers<
   ParentType extends ResolversParentTypes["Query"] = ResolversParentTypes["Query"]
 > = {
   profile: Resolver<Maybe<ResolversTypes["Profile"]>, ParentType, ContextType>;
+  tweets: Resolver<
+    Maybe<Array<Maybe<ResolversTypes["Tweet"]>>>,
+    ParentType,
+    ContextType
+  >;
+};
+
+export type TweetResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes["Tweet"] = ResolversParentTypes["Tweet"]
+> = {
+  createdAt: Resolver<Maybe<ResolversTypes["String"]>, ParentType, ContextType>;
+  imageHeight: Resolver<Maybe<ResolversTypes["Int"]>, ParentType, ContextType>;
+  imageUrl: Resolver<Maybe<ResolversTypes["String"]>, ParentType, ContextType>;
+  imageWidth: Resolver<Maybe<ResolversTypes["Int"]>, ParentType, ContextType>;
+  likeCount: Resolver<Maybe<ResolversTypes["Int"]>, ParentType, ContextType>;
+  name: Resolver<Maybe<ResolversTypes["String"]>, ParentType, ContextType>;
+  replyCount: Resolver<Maybe<ResolversTypes["Int"]>, ParentType, ContextType>;
+  retweetCount: Resolver<Maybe<ResolversTypes["Int"]>, ParentType, ContextType>;
+  screenName: Resolver<
+    Maybe<ResolversTypes["String"]>,
+    ParentType,
+    ContextType
+  >;
+  text: Resolver<Maybe<ResolversTypes["String"]>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
 export type Resolvers<ContextType = any> = {
   Profile: ProfileResolvers<ContextType>;
   Query: QueryResolvers<ContextType>;
+  Tweet: TweetResolvers<ContextType>;
 };

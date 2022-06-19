@@ -1,5 +1,43 @@
 {
   "profile": {
     "name": "リチャード伊真岡"
-  }
+  },
+  "tweets": [
+    {
+      "name": "リチャード 伊真岡",
+      "screenName": "RichardImaokaJP",
+      "text": "今年の抱負をようやく決めました。\n「議論の最中、問題の理解の前にジャンプして解決策を発言しない。それはただの思いつきなので厳に慎む。」",
+      "createdAt": "午後4:03 · 2022年3月23日",
+      "replyCount": 0,
+      "retweetCount": 0,
+      "likeCount": 0,
+      "imageUrl": null,
+      "imageWidth": null,
+      "imageHeight": null
+    },
+    {
+      "name": "リチャード 伊真岡",
+      "screenName": "RichardImaokaJP",
+      "text": "AWSのソリューション・アーキテクト・アソシエイトに続いて、SysOps アソシエイトも取得しました。",
+      "createdAt": "午前7:49 · 2022年3月1日",
+      "replyCount": 0,
+      "retweetCount": 0,
+      "likeCount": 0,
+      "imageUrl": "https://pbs.twimg.com/media/FMt9mOHVUAM6qLY?format=png&name=small",
+      "imageWidth": 600,
+      "imageHeight": 200
+    },
+    {
+      "name": "リチャード 伊真岡",
+      "screenName": "RichardImaokaJP",
+      "text": "架空の企業「モンドリクソン・アンド・カンパニー・ジャパン株式会社」の社員録ウェブサイトをデザインしています。楽しいです。",
+      "createdAt": "午後9:49 · 2022年2月22日",
+      "replyCount": 0,
+      "retweetCount": 0,
+      "likeCount": 4,
+      "imageUrl": null,
+      "imageWidth": null,
+      "imageHeight": null
+    }
+  ]
 }

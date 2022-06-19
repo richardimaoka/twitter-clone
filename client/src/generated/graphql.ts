@@ -29,6 +29,21 @@ export type Profile = {
 export type Query = {
   __typename?: "Query";
   profile: Maybe<Profile>;
+  tweets: Maybe<Array<Maybe<Tweet>>>;
+};
+
+export type Tweet = {
+  __typename?: "Tweet";
+  createdAt: Maybe<Scalars["String"]>;
+  imageHeight: Maybe<Scalars["Int"]>;
+  imageUrl: Maybe<Scalars["String"]>;
+  imageWidth: Maybe<Scalars["Int"]>;
+  likeCount: Maybe<Scalars["Int"]>;
+  name: Maybe<Scalars["String"]>;
+  replyCount: Maybe<Scalars["Int"]>;
+  retweetCount: Maybe<Scalars["Int"]>;
+  screenName: Maybe<Scalars["String"]>;
+  text: Maybe<Scalars["String"]>;
 };
 
 export type GetProfileQueryVariables = Exact<{ [key: string]: never }>;

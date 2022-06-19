@@ -12,8 +12,10 @@ type ContextData = Query;
 const resolvers: { Query: QueryResolvers<ContextData> } = {
   Query: {
     profile: async (parent, args, context, info) => {
-      console.log(`profile`);
       return context.profile;
+    },
+    tweets: async (parent, args, context, info) => {
+      return context.tweets;
     },
   },
 };

@@ -1,7 +1,21 @@
 type Query {
   profile: Profile
+  tweets: [Tweet]
 }
 
 type Profile {
   name: String
+}
+
+type Tweet {
+  name: String
+  screenName: String
+  text: String
+  createdAt: String
+  replyCount: Int
+  retweetCount: Int
+  likeCount: Int
+  imageUrl: String
+  imageWidth: Int
+  imageHeight: Int
 }
