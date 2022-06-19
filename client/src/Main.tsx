@@ -3,6 +3,8 @@ import React from "react";
 import { css } from "@emotion/react";
 import { Profile } from "./Profile";
 import { Tweet } from "./Tweet";
+import { gql } from "@apollo/client";
+import { useGetProfileQuery } from "./generated/graphql";
 
 export const Main = (): JSX.Element => {
   return (

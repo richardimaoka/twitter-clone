@@ -1,18 +1,19 @@
 import { ApolloServer, gql } from "apollo-server";
 import * as fs from "fs";
-import { QueryResolvers } from "./generated/graphql";
+import { Query, QueryResolvers } from "./generated/graphql";
 
 const typeDefs = gql`
   ${fs.readFileSync(__dirname.concat("/schema.gql"), "utf8")}
 `;
 
-interface ServerContext {}
+//data.json directly define Query
+type ContextData = Query;
 
-const resolvers: { Query: QueryResolvers<ServerContext> } = {
+const resolvers: { Query: QueryResolvers<ContextData> } = {
   Query: {
     profile: async (parent, args, context, info) => {
       console.log(`profile`);
-      return null;
+      return context.profile;
     },
   },
 };
@@ -27,12 +28,10 @@ const readJsonFile = async (relativeFileName: string): Promise<any> => {
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context: async ({ req }: any): Promise<ServerContext> => {
+  context: async ({ req }: any): Promise<ContextData> => {
     try {
-      const divisions = await readJsonFile("/data.json");
-      return {
-        divisions,
-      };
+      const data = await readJsonFile("/data.json");
+      return data;
     } catch (err) {
       console.log("***ERROR OCURRED***");
       console.log(err);
