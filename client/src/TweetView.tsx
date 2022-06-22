@@ -47,21 +47,21 @@ export const TweetView = ({ fragment }: TweetViewProps): JSX.Element => {
             grid-column: 1/2;
           `}
         >
-          richard imaoka
+          {fragment.name}
         </div>
         <div
           css={css`
             grid-column: 2/3;
           `}
         >
-          @RichardImaokaJP
+          &#64;{fragment.screenName}
         </div>
         <div
           css={css`
             grid-column: 3/4;
           `}
         >
-          3月1日
+          {fragment.createdAt}
         </div>
       </div>
       <div
@@ -70,21 +70,22 @@ export const TweetView = ({ fragment }: TweetViewProps): JSX.Element => {
         `}
       >
         <div>
-          <span>
-            AWSのソリューション・アーキテクト・アソシエイトに続いて、SysOps
-            アソシエイトも取得しました。
-          </span>
+          <span>{fragment.text}</span>
         </div>
-        <div>
-          <img
-            width="680px"
-            height="296px"
-            css={css`
-              width: 100%;
-            `}
-            src="http://localhost:8080/images/aws-certs.png"
-          />
-        </div>
+        {fragment.imageUrl ? (
+          <div>
+            <img
+              width="680px"
+              height="296px"
+              css={css`
+                width: 100%;
+              `}
+              src={fragment.imageUrl}
+            />
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
       <div
         css={css`
