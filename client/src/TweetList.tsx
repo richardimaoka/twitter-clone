@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { gql } from "@apollo/client";
 import { css } from "@emotion/react";
-import { Tweet } from "./Tweet";
+import { TweetView } from "./TweetView";
 
 const tweetsQuery = gql`
   query GetProfile {
@@ -17,7 +17,7 @@ export const TweetList = (): JSX.Element => {
     <>
       {tweets.map((t, index) => (
         <div>
-          <Tweet />
+          <TweetView />
         </div>
       ))}
     </>

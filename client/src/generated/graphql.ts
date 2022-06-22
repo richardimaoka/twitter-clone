@@ -53,7 +53,7 @@ export type GetProfileQuery = {
   profile: { __typename?: "Profile"; name: string | null } | null;
 };
 
-export type TweetFragment = {
+export type TweetViewFragment = {
   __typename?: "Tweet";
   name: string | null;
   screenName: string | null;
@@ -67,8 +67,8 @@ export type TweetFragment = {
   imageHeight: number | null;
 };
 
-export const TweetFragmentDoc = gql`
-  fragment Tweet on Tweet {
+export const TweetViewFragmentDoc = gql`
+  fragment TweetView on Tweet {
     name
     screenName
     text

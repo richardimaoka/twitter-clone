@@ -1,14 +1,14 @@
 /** @jsxImportSource @emotion/react */
 import { gql } from "@apollo/client";
 import { css } from "@emotion/react";
-import { TweetFragment } from "./generated/graphql";
+import { TweetViewFragment } from "./generated/graphql";
 
-export interface TweetProps {
+export interface TweetViewProps {
   empty: string;
-  fragment: TweetFragment;
+  fragment: TweetViewFragment;
 }
 
-export const Tweet = (): JSX.Element => {
+export const TweetView = (): JSX.Element => {
   return (
     <div
       css={css`
@@ -96,8 +96,8 @@ export const Tweet = (): JSX.Element => {
   );
 };
 
-Tweet.fragment = gql`
-  fragment Tweet on Tweet {
+TweetView.fragment = gql`
+  fragment TweetView on Tweet {
     name
     screenName
     text
