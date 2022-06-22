@@ -4,11 +4,10 @@ import { css } from "@emotion/react";
 import { TweetViewFragment } from "./generated/graphql";
 
 export interface TweetViewProps {
-  empty: string;
   fragment: TweetViewFragment;
 }
 
-export const TweetView = (): JSX.Element => {
+export const TweetView = ({ fragment }: TweetViewProps): JSX.Element => {
   return (
     <div
       css={css`

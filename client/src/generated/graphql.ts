@@ -53,6 +53,25 @@ export type GetProfileQuery = {
   profile: { __typename?: "Profile"; name: string | null } | null;
 };
 
+export type GetTweetsQueryVariables = Exact<{ [key: string]: never }>;
+
+export type GetTweetsQuery = {
+  __typename?: "Query";
+  tweets: Array<{
+    __typename?: "Tweet";
+    name: string | null;
+    screenName: string | null;
+    text: string | null;
+    createdAt: string | null;
+    replyCount: number | null;
+    retweetCount: number | null;
+    likeCount: number | null;
+    imageUrl: string | null;
+    imageWidth: number | null;
+    imageHeight: number | null;
+  } | null> | null;
+};
+
 export type TweetViewFragment = {
   __typename?: "Tweet";
   name: string | null;
@@ -135,4 +154,65 @@ export type GetProfileLazyQueryHookResult = ReturnType<
 export type GetProfileQueryResult = Apollo.QueryResult<
   GetProfileQuery,
   GetProfileQueryVariables
+>;
+export const GetTweetsDocument = gql`
+  query GetTweets {
+    tweets {
+      name
+      screenName
+      text
+      createdAt
+      replyCount
+      retweetCount
+      likeCount
+      imageUrl
+      imageWidth
+      imageHeight
+    }
+  }
+`;
+
+/**
+ * __useGetTweetsQuery__
+ *
+ * To run a query within a React component, call `useGetTweetsQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetTweetsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetTweetsQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGetTweetsQuery(
+  baseOptions?: Apollo.QueryHookOptions<GetTweetsQuery, GetTweetsQueryVariables>
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useQuery<GetTweetsQuery, GetTweetsQueryVariables>(
+    GetTweetsDocument,
+    options
+  );
+}
+export function useGetTweetsLazyQuery(
+  baseOptions?: Apollo.LazyQueryHookOptions<
+    GetTweetsQuery,
+    GetTweetsQueryVariables
+  >
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useLazyQuery<GetTweetsQuery, GetTweetsQueryVariables>(
+    GetTweetsDocument,
+    options
+  );
+}
+export type GetTweetsQueryHookResult = ReturnType<typeof useGetTweetsQuery>;
+export type GetTweetsLazyQueryHookResult = ReturnType<
+  typeof useGetTweetsLazyQuery
+>;
+export type GetTweetsQueryResult = Apollo.QueryResult<
+  GetTweetsQuery,
+  GetTweetsQueryVariables
 >;
