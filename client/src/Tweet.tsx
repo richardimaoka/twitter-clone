@@ -1,8 +1,11 @@
 /** @jsxImportSource @emotion/react */
+import { gql } from "@apollo/client";
 import { css } from "@emotion/react";
+import { TweetFragment } from "./generated/graphql";
 
 export interface TweetProps {
   empty: string;
+  fragment: TweetFragment;
 }
 
 export const Tweet = (): JSX.Element => {
@@ -92,3 +95,18 @@ export const Tweet = (): JSX.Element => {
     </div>
   );
 };
+
+Tweet.fragment = gql`
+  fragment Tweet on Tweet {
+    name
+    screenName
+    text
+    createdAt
+    replyCount
+    retweetCount
+    likeCount
+    imageUrl
+    imageWidth
+    imageHeight
+  }
+`;

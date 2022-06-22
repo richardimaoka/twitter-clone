@@ -53,6 +53,34 @@ export type GetProfileQuery = {
   profile: { __typename?: "Profile"; name: string | null } | null;
 };
 
+export type TweetFragment = {
+  __typename?: "Tweet";
+  name: string | null;
+  screenName: string | null;
+  text: string | null;
+  createdAt: string | null;
+  replyCount: number | null;
+  retweetCount: number | null;
+  likeCount: number | null;
+  imageUrl: string | null;
+  imageWidth: number | null;
+  imageHeight: number | null;
+};
+
+export const TweetFragmentDoc = gql`
+  fragment Tweet on Tweet {
+    name
+    screenName
+    text
+    createdAt
+    replyCount
+    retweetCount
+    likeCount
+    imageUrl
+    imageWidth
+    imageHeight
+  }
+`;
 export const GetProfileDocument = gql`
   query GetProfile {
     profile {
