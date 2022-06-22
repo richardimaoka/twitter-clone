@@ -5,6 +5,7 @@ import { Profile } from "./Profile";
 import { Tweet } from "./Tweet";
 import { gql } from "@apollo/client";
 import { useGetProfileQuery } from "./generated/graphql";
+import { TweetList } from "./TweetList";
 
 export const Main = (): JSX.Element => {
   return (
@@ -24,7 +25,7 @@ export const Main = (): JSX.Element => {
         `}
       >
         <Profile />
-        <Tweet />
+        <TweetList />
       </div>
     </main>
   );

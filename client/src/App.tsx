@@ -5,7 +5,6 @@ import { Leftbar } from "./Leftbar";
 import { Rightbar } from "./Rightbar";
 
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const client = new ApolloClient({
   uri: "http://localhost:4000",
